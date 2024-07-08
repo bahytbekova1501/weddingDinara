@@ -105,6 +105,7 @@ function HomePage() {
         <div className="animate-on-scroll">
           <h2 className="date animate-on-scroll"> {t("date")}</h2>
           <Calendar />
+          <h2>khjdj</h2>
         </div>
         {/* <div style={{ position: "relative" }}> */}
         <div style={{ display: "flex", justifyContent: "center" }}>
