@@ -22,9 +22,6 @@
   font-family: var(--main-family);
 }
 
-/* .mobile-only {
-  display: none;
-} */
 .image_1 {
   width: 100%;
 }
@@ -287,6 +284,21 @@
   font-family: var(--main-family); /* Замените на нужный вам шрифт */
   font-size: 6vw;
 }
+
+/* Добавленные стили для анимации появления текста при прокрутке */
+.animate-on-scroll {
+  opacity: 0; /* Начинаем с нулевой прозрачности */
+  transform: translateY(
+    20px
+  ); /* Сдвигаем текст вниз, чтобы он появился сверху */
+  transition: opacity 1s ease, transform 1s ease; /* Плавная анимация появления */
+}
+
+.animate-on-scroll.show {
+  opacity: 1; /* При появлении текста устанавливаем полную прозрачность */
+  transform: translateY(0); /* Возвращаем текст в исходное положение */
+}
+
 /* @media (mim-width: 600px) {
   .answer_form_container p {
     font-size: 20px;
