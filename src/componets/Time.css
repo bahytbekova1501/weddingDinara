@@ -1,0 +1,25 @@
+.countdown {
+  text-align: center;
+  /* margin-top: 20vh; */
+}
+
+.countdown h2 {
+  font-weight: 200;
+  font-size: 6vw;
+  color: #ffffff;
+  margin: 5vw;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+.countdown div {
+  color: #ffffff;
+}
+.countdown span,
+p {
+  font-weight: 200;
+  font-size: 5vw;
+}

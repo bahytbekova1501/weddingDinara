@@ -1,38 +1,300 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;700;800&family=Roboto:wght@300;400;500;700;900&family=Rubik+Pixels&display=swap");
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("/src/fonts/ofont.ru_Lastochka.ttf") format("woff2"),
+    url("/src/fonts/ofont.ru_Lastochka.ttf") format("woff"); /* формат для более старых браузеров */
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --main-family: "Manrope", sans-serif;
+  /* --main-family: "El Messiri", sans-serif; */
+  --second-family: "Great Vibes", cursive;
+  --third-family: "MyCustomFont", Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-family);
+}
+
+/* .mobile-only {
+  display: none;
+} */
+.image_1 {
+  width: 100%;
+}
+.image_2 {
+  margin: 10vh 0 10vh 0;
+  width: 90%;
+}
+.image_3_container {
+  position: relative;
+  width: 90%;
+  margin: 20vw 0 10vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image_3 {
+  width: 100%;
+
+  /* margin: 3vh 0 3vh 0; */
+}
+.сountdown {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  white-space: nowrap;
+}
+.gradient-mask {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Чтобы градиент не выходил за пределы фотографии */
+  width: 100%; /* Установите ширину по необходимости */
+}
+
+.gradient-mask::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Высота области с градиентом */
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1),
+    transparent
+  ); /* Градиент от белого до прозрачного */
+  pointer-events: none; /* Предотвращение взаимодействия с градиентом */
+  mask-image: linear-gradient(to top, black 30%, transparent 90%);
+}
+/* .language {
+  position: absolute;
+  font-size: 4vw;
+  z-index: 10;
+  color: black;
+  bottom: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+} */
+.language-buttons {
+  display: flex;
+  font-size: 4vw;
+  bottom: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  position: absolute;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.language {
+  padding: 2vw;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+}
+
+.language.selected {
+  color: #ffffff;
+}
+
+.name {
+  position: absolute;
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 12vw;
+  bottom: 50px; /* Пример позиции от нижнего края */
+  left: 50%; /* Пример позиции слева */
+  transform: translateX(-50%);
+  z-index: 10;
+  white-space: nowrap;
+}
+.music {
+  position: absolute;
+  bottom: 25%; /* Пример позиции от нижнего края */
+  left: 85%; /* Пример позиции слева */
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.tetx_1,
+.tetx_2 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 5vw;
+  margin: 0 3vw 0 3vw;
+}
+.tetx_1 {
+  font-size: 8vw;
+  color: #c5b396;
+  margin-bottom: 5vw;
+  white-space: nowrap;
+}
+/* .blesk {
+  z-index: 10;
+  position: absolute;
+  bottom: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+.date {
+  margin: 20vw 0 10vw 0;
+  text-align: center;
+  color: #c5b396;
+  font-weight: 200;
+  font-size: 6vw;
+}
+.time {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.start {
+  font-weight: 200;
+  margin: 0;
+  font-size: 6vw;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.times {
+  /* font-family: var(--second-family); */
+  font-weight: 300;
+  font-size: 6vw;
+  margin: 5vw 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.adress {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
+}
+.adress h2 {
+  /* color: #c5b396; */
+  font-size: 5vw;
+  font-weight: 200;
+  margin: 0;
+}
+
+.name_res {
+  font-family: var(--second-family);
+  color: #c5b396;
+  font-weight: 300;
+  font-size: 10vw;
+  margin: 3vw;
+}
+.aadress_res {
+  font-weight: 200;
+  font-size: 5vw;
+  margin: 0 3vw 0 3vw;
+}
+.answer_form_container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 5vw 0;
+  text-align: center;
+}
+.anser_form_h2 {
+  font-size: 6vw;
+  font-weight: 200;
+  margin: 5vh 0;
+  color: #c5b396;
+}
+.answer_form_container p {
+  font-size: 4vw;
+}
+.answer_form_container label {
+  font-size: 4.4vw;
+  font-weight: 200;
+}
+.main-input {
+  height: 10vw;
+  width: 97%;
+  border: 2px solid #c5b396;
+  background-color: rgba(255, 255, 255, 0);
+  padding-left: 2vw;
+  border-radius: 3vw;
+  margin: 0 0 6vw 0;
+}
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.radio-label {
+  margin: 0.5vw 0;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+  /* font-size: 6vw; */
+  white-space: nowrap;
+  color: #000000; /* Цвет текста меток */
+}
+
+.radio-input {
+  margin-right: 5px; /* Расстояние между радио кнопками и текстом */
+  appearance: none; /* Отключаем стандартные стили браузера для радио кнопок */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px; /* Размер кастомного кружка */
+  height: 16px; /* Размер кастомного кружка */
+  border: 2px solid #c5b396; /* Цвет рамки для не выбранных радио кнопок */
+  border-radius: 50%; /* Круглый кружок */
+  outline: none; /* Убираем контур фокуса */
+  cursor: pointer; /* Указатель при наведении */
+}
+
+.radio-input:checked {
+  background-color: #c5b396; /* Цвет фона для выбранных радио кнопок */
+  border-color: #c5b396; /* Цвет рамки для выбранных радио кнопок */
+}
+
+.radio-input:checked + .radio-label {
+  color: #c5b396; /* Цвет текста метки для выбранных радио кнопок */
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  width: 50%;
+  height: 10vw;
+  background-color: #c5b396;
+  border: 1px solid #c5b396;
+  border-radius: 5vw;
   color: white;
+  /* font-weight: 700; */
+  font-family: var(--second-family);
+  margin: 7vw 0 10vw 0;
+}
+.default-font {
+  font-family: var(--second-family); /* Замените на нужный вам шрифт */
+  font-size: 7vw;
 }
 
-.App-link {
-  color: #61dafb;
+.kyrgyz-font {
+  font-family: var(--main-family); /* Замените на нужный вам шрифт */
+  font-size: 6vw;
+}
+/* @media (mim-width: 600px) {
+  .answer_form_container p {
+    font-size: 20px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 400px) {
+  .answer_form_container p {
+    font-size: 12px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+} */

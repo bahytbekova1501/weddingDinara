@@ -1,0 +1,33 @@
+.music_btn {
+  width: 17vw;
+  height: 17vw;
+  background-color: black;
+  border-radius: 50%;
+  border: 1px solid black;
+  /* padding: 0; */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1s infinite;
+}
+
+.music_container img {
+  /* position: absolute; */
+  width: 7vw;
+  height: 7vw;
+  /* bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%); */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
