@@ -74,6 +74,15 @@ function HomePage() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const quote = t("quote")
+    .split("\n")
+    .map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ));
+
   return (
     <div>
       <div className="gradient-mask">
@@ -263,7 +272,7 @@ function HomePage() {
         </div>
       </div>
       <div>
-        <h2 className="quote animate-on-scroll">{t("quote")}</h2>
+        <h2 className="quote animate-on-scroll">{quote}</h2>
       </div>
     </div>
   );
