@@ -12,36 +12,102 @@ import ProductList from "./componets/ProductList";
 import { useProductContext } from "./Context/ProductContext";
 import MusicPlayer from "./componets/MusicPlayer";
 import { useTranslation } from "react-i18next";
+import { getDatabase, ref, set, push } from "firebase/database";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCg1WD3kl8SaBb66p5Q7E-veyZP1VD3ykY",
+  authDomain: "salamat-and-dayana-wedding.firebaseapp.com",
+  projectId: "salamat-and-dayana-wedding",
+  storageBucket: "salamat-and-dayana-wedding.appspot.com",
+  messagingSenderId: "841557333819",
+  appId: "1:841557333819:web:59782755bdcba93358891e",
+  measurementId: "G-743XK7TK7M",
+};
 
 function HomePage() {
+  useEffect(() => {
+    // Initialize Firebase inside useEffect
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // Optionally, you can return cleanup function if needed
+    return () => {
+      // Perform cleanup if necessary
+    };
+  }, []); // Empty dependency array means this effect runs only once on mount
   const { t, i18n } = useTranslation();
 
-  const { addAns } = useProductContext();
+  // const { addAns } = useProductContext();
+
   const [formValue, setFormValue] = useState({
     name: "",
     answer: "",
   });
 
-  function handleChange(e) {
+  const handleChange = (e) => {
     const obj = {
       ...formValue,
       [e.target.name]: e.target.value,
     };
     setFormValue(obj);
-  }
-  function handleSubmit(e) {
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!formValue.name.trim() || !formValue.answer.trim()) {
       alert("Заполните поле!");
       return;
     }
-
-    addAns(formValue);
+    saveData(formValue);
     setFormValue({
       name: "",
       answer: "",
     });
-  }
+  };
+
+  const saveData = async () => {
+    try {
+      const db = getDatabase();
+      const answersRef = ref(db, "ask/answers");
+      const newAnsRef = push(answersRef);
+      await set(newAnsRef, {
+        name: formValue.name,
+        ans: formValue.answer,
+      });
+      alert("Ваши данные успешно сохранены!");
+    } catch (error) {
+      console.error("Ошибка при сохранении данных в Firebase:", error.message);
+      alert("Ошибка при сохранении данных");
+    }
+  };
+
+  // const [formValue, setFormValue] = useState({
+  //   name: "",
+  //   answer: "",
+  // });
+
+  // function handleChange(e) {
+  //   const obj = {
+  //     ...formValue,
+  //     [e.target.name]: e.target.value,
+  //   };
+  //   setFormValue(obj);
+  // }
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   if (!formValue.name.trim() || !formValue.answer.trim()) {
+  //     alert("Заполните поле!");
+  //     return;
+  //   }
+
+  //   addAns(formValue);
+  //   setFormValue({
+  //     name: "",
+  //     answer: "",
+  //   });
+  // }
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
@@ -204,7 +270,6 @@ function HomePage() {
               }}
             >
               <div>
-                {/* <p>{t("names")}</p> */}
                 <input
                   className="main-input animate-on-scroll"
                   value={formValue.name}
@@ -228,18 +293,6 @@ function HomePage() {
                   />
                   {t("willCome")}
                 </label>
-                {/* <label className="radio-label">
-                    <input
-                      className="radio-input"
-                      type="radio"
-                      value="Мы придем с партнером"
-                      checked={formValue.answer === "Мы придем с партнером"}
-                      onChange={handleChange}
-                      name="answer"
-                      required
-                    />
-                    {t("willComeWithPartner")}
-                  </label> */}
                 <label className="radio-label">
                   <input
                     className="radio-input"
@@ -266,9 +319,6 @@ function HomePage() {
               </div>
             </form>
           </div>
-          {/* <div style={{ margin: "5vw" }}>
-              <ProductList />
-            </div> */}
         </div>
       </div>
       <div>
