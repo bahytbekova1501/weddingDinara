@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import image from "./img/свадьба2.jpg";
-import hands from "./img/руки.jfif";
+import hands from "./img/руки2.jpg";
 import party from "./img/party.jfif";
 import Calendar from "./componets/Сalendar";
 import serebro from "./img/серебро3.png";
 import zoloto from "./img/золото.png";
 import Time from "./componets/Time";
+import arrow from "./img/arrows.png";
 import ProductList from "./componets/ProductList";
 import { useProductContext } from "./Context/ProductContext";
 import MusicPlayer from "./componets/MusicPlayer";
@@ -95,6 +96,11 @@ function HomePage() {
         </div>
         <div className="music">
           <MusicPlayer />
+        </div>
+      </div>{" "}
+      <div className="arrow_container">
+        <div className="arrow_parent">
+          <img className="arrow" src={arrow} alt="" />
         </div>
       </div>
       {/* <img className="blesk" style={{ width: "100%" }} src={serebro} alt="" /> */}

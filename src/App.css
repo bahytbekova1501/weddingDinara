@@ -65,7 +65,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40%; /* Высота области с градиентом */
+  height: 35%; /* Высота области с градиентом */
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 1),
@@ -113,7 +113,7 @@
   font-family: var(--second-family);
   font-weight: 300;
   font-size: 12vw;
-  bottom: 50px; /* Пример позиции от нижнего края */
+  bottom: 0; /* Пример позиции от нижнего края */
   left: 50%; /* Пример позиции слева */
   transform: translateX(-50%);
   z-index: 10;
@@ -121,7 +121,7 @@
 }
 .music {
   position: absolute;
-  bottom: 25%; /* Пример позиции от нижнего края */
+  bottom: 17%; /* Пример позиции от нижнего края */
   left: 85%; /* Пример позиции слева */
   transform: translateX(-50%);
   z-index: 10;
@@ -136,7 +136,7 @@
 .tetx_1 {
   font-size: 8vw;
   color: #c5b396;
-  margin-bottom: 5vw;
+  margin: 10vw 0 5vw 0;
   white-space: nowrap;
 }
 /* .blesk {
@@ -301,6 +301,35 @@
   transform: translateY(0); /* Возвращаем текст в исходное положение */
 }
 
+.arrow_parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Высота контейнера для демонстрации */
+  position: relative; /* Добавляем позиционирование для анимации */
+
+  overflow: hidden;
+}
+.arrow {
+  width: 6vw;
+  height: 10vw;
+  /* transform: rotate(90deg); */
+  z-index: 10;
+  position: absolute;
+  top: 0; /* Начальная позиция - сверху */
+  animation: moveDown 3s infinite; /* Добавляем анимацию */
+}
+
+@keyframes moveDown {
+  0% {
+    top: 0; /* Начинаем сверху */
+    transform: translateY(0) rotate(90deg); /* Начальное положение и поворот */
+  }
+  100% {
+    top: 100%; /* Заканчиваем внизу */
+    transform: translateY(-100%) rotate(90deg); /* Центрируем элемент */
+  }
+}
 /* @media (mim-width: 600px) {
   .answer_form_container p {
     font-size: 20px;
