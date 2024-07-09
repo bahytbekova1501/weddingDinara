@@ -264,9 +264,9 @@ function HomePage() {
             </div> */}
         </div>
       </div>
-      {/* <div>
-          <h2> </h2>
-        </div> */}
+      <div>
+        <h2 className="quote animate-on-scroll">{t("quote")}</h2>
+      </div>
     </div>
   );
 }

@@ -300,6 +300,14 @@
   opacity: 1; /* При появлении текста устанавливаем полную прозрачность */
   transform: translateY(0); /* Возвращаем текст в исходное положение */
 }
+.quote {
+  color: #c5b396;
+  font-weight: 200;
+  text-align: center;
+  font-size: 6vw;
+  /* font-family: var(--second-family); */
+  margin: 0 10vw 10vw;
+}
 
 .arrow_parent {
   display: flex;
