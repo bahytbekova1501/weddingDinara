@@ -248,9 +248,7 @@ function HomePage() {
               </div>
               <div className="btn-container">
                 <button
-                  className={`btn animate-on-scroll ${
-                    i18n.language === "kg" ? "kyrgyz-font" : "default-font"
-                  }`}
+                  className="btn animate-on-scroll"
                   type="submit"
                   variant="contained"
                 >

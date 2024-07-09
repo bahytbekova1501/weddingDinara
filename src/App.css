@@ -272,19 +272,10 @@
   border-radius: 5vw;
   color: white;
   /* font-weight: 700; */
-  font-family: var(--second-family);
-  margin: 7vw 0 10vw 0;
-}
-.default-font {
-  font-family: var(--second-family); /* Замените на нужный вам шрифт */
-  font-size: 7vw;
   font-weight: 200;
-}
-
-.kyrgyz-font {
-  font-family: var(--main-family); /* Замените на нужный вам шрифт */
   font-size: 5.5vw;
-  font-weight: 200;
+  font-family: var(--main-family);
+  margin: 7vw 0 10vw 0;
 }
 
 /* Добавленные стили для анимации появления текста при прокрутке */
