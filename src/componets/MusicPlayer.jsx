@@ -1,31 +1,100 @@
-import React, { useState, useRef } from "react";
-import musicFile from "../music/new.mp3"; // Путь к вашему аудиофайлу
+import React, { useState, useRef, useEffect } from "react";
+import musicFile from "../music/new.mp3";
 import "./MusicPlayer.css";
+
+import start from "../img/начало.png";
+import end from "../img/конец.png";
+import heart from "../img/сердце.png";
+import music from "../img/музыка.png";
 import stop from "../img/icons8-стоп-50.png";
 import play from "../img/icons8-воспроизведение-50.png";
-function MusicPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false); // Состояние для воспроизведения музыки
-  const audioRef = useRef(new Audio(musicFile)); // Создаем ссылку на аудиофайл
 
-  // Функция для переключения состояния воспроизведения
+function MusicPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const audioRef = useRef(new Audio(musicFile));
+
+  useEffect(() => {
+    const audio = audioRef.current;
+
+    const setAudioData = () => {
+      setDuration(audio.duration);
+      setCurrentTime(audio.currentTime);
+    };
+
+    const updateTime = () => setCurrentTime(audio.currentTime);
+
+    audio.addEventListener("loadedmetadata", setAudioData);
+    audio.addEventListener("timeupdate", updateTime);
+
+    return () => {
+      audio.removeEventListener("loadedmetadata", setAudioData);
+      audio.removeEventListener("timeupdate", updateTime);
+    };
+  }, []);
+
   const togglePlay = () => {
+    const audio = audioRef.current;
     if (isPlaying) {
-      audioRef.current.pause(); // Пауза воспроизведения
+      audio.pause();
     } else {
-      audioRef.current.play(); // Воспроизведение
+      audio.play();
     }
-    setIsPlaying(!isPlaying); // Инвертируем текущее состояние
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleProgressChange = (e) => {
+    const audio = audioRef.current;
+    const newTime = e.target.value;
+    audio.currentTime = newTime;
+    setCurrentTime(newTime);
+  };
+
+  const handleRewind = () => {
+    const audio = audioRef.current;
+    audio.currentTime = Math.max(audio.currentTime - 10, 0);
+  };
+
+  const handleForward = () => {
+    const audio = audioRef.current;
+    audio.currentTime = Math.min(audio.currentTime + 10, duration);
   };
 
   return (
     <div className="music_container">
-      {/* Иконка для запуска музыки */}
-      <div className="music_btn_container">
-        <button className="music_btn" onClick={togglePlay}>
-          {isPlaying ? <img src={stop} alt="" /> : <img src={play} alt="" />}{" "}
-          {/* Изменение надписи в зависимости от состояния воспроизведения */}
+      {/* Прогресс-бар сверху */}
+      <input
+        type="range"
+        min="0"
+        max={duration}
+        value={currentTime}
+        onChange={handleProgressChange}
+        className="progress_bar"
+      />
+
+      {/* Панель управления + иконки */}
+      <div className="music_controls">
+        <img className="heart_music" src={heart} alt="heart" />
+
+        <button className="start_end" onClick={handleRewind}>
+          <img src={start} alt="rewind" />
         </button>
-        {/* <h2 className="rotate-text">Нажмите чтобы воспроизвести музыку</h2> */}
+
+        <button className="music_btn" onClick={togglePlay}>
+          {isPlaying ? (
+            <img src={stop} alt="stop" />
+          ) : (
+            <img src={play} alt="play" />
+          )}
+        </button>
+
+        <button className="start_end" onClick={handleForward}>
+          <img src={end} alt="forward" />
+        </button>
+
+        <img className="heart_music" src={music} alt="music" />
       </div>
     </div>
   );

@@ -1,12 +1,15 @@
 // HomePage.jsx
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import image from "./img/свадьба2.jpg";
+import image from "./img/photo1.jpg";
 import hands from "./img/руки2.jpg";
 import party from "./img/party.jfif";
 import Calendar from "./componets/Сalendar";
 import Time from "./componets/Time";
 import arrow from "./img/arrows.png";
+import ring from "./img/кольца_золото.png";
+import ring2 from "./img/кольца_серебро.png";
+
 import MusicPlayer from "./componets/MusicPlayer";
 import { useTranslation } from "react-i18next";
 import { db } from "./firebase";
@@ -94,8 +97,17 @@ function HomePage() {
     <div>
       {/* Шапка с фото и музыкой */}
       <div className="gradient-mask">
-        <img className="image_1" src={hands} alt="" />
-        <div className="name">Саламат & Даяна</div>
+        <img className="image_1" src={image} alt="" />
+
+        <div className="name">
+          <span style={{ display: "flex", justifyContent: "start" }}>
+            Syimyk
+          </span>
+
+          <img className="ring" src={ring} alt="" />
+          <span> &</span>
+          <span style={{ display: "flex", justifyContent: "end" }}>Dinara</span>
+        </div>
 
         <div className="language-buttons ">
           <button
@@ -111,17 +123,16 @@ function HomePage() {
             Русский
           </button>
         </div>
-
         <div className="music">
           <MusicPlayer />
         </div>
       </div>
 
-      <div className="arrow_container">
+      {/* <div className="arrow_container">
         <div className="arrow_parent">
           <img className="arrow" src={arrow} alt="" />
         </div>
-      </div>
+      </div> */}
 
       {/* Основной контент */}
       <div className="mobile-only">
