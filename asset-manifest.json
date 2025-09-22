@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/weddingDinara/static/css/main.1966331f.css",
+    "main.js": "/weddingDinara/static/js/main.51531946.js",
+    "static/js/437.fdef7986.chunk.js": "/weddingDinara/static/js/437.fdef7986.chunk.js",
+    "static/media/new.mp3": "/weddingDinara/static/media/new.a418a18201ff8a1bc433.mp3",
+    "static/media/свадьба2.jpg": "/weddingDinara/static/media/свадьба2.8069aa6595b400503b3d.jpg",
+    "static/media/ofont.ru_Lastochka.ttf": "/weddingDinara/static/media/ofont.ru_Lastochka.55feea1319d1d8f6db43.ttf",
+    "static/media/party.jfif": "/weddingDinara/static/media/party.be33011b47dc2330411b.jfif",
+    "static/media/руки2.jpg": "/weddingDinara/static/media/руки2.b73ad72451cc453c7560.jpg",
+    "static/media/heart1.svg": "/weddingDinara/static/media/heart1.ed255a99a360c8695baddba8a657b8d3.svg",
+    "index.html": "/weddingDinara/index.html",
+    "main.1966331f.css.map": "/weddingDinara/static/css/main.1966331f.css.map",
+    "main.51531946.js.map": "/weddingDinara/static/js/main.51531946.js.map",
+    "437.fdef7986.chunk.js.map": "/weddingDinara/static/js/437.fdef7986.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1966331f.css",
+    "static/js/main.51531946.js"
+  ]
+}
