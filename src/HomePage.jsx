@@ -252,7 +252,7 @@ function HomePage() {
         <div className="image_2_block ">
           <img className="krai_2" src={krai4} alt="" />
           <img className="krai_3" src={krai3} alt="" />
-          <img className="image_2 animate-on-scroll" src={phtoto13} alt="" />
+          <img className="image_2" src={phtoto13} alt="" />
         </div>
         <div className="adress_block">
           <div className="flower_adress_block ">
@@ -398,7 +398,7 @@ function HomePage() {
         </div>
         {i18n.language === "kg" && (
           <div
-            className="animate-on-scroll"
+            // className="animate-on-scroll"
             style={{
               position: "relative",
               display: "flex",
