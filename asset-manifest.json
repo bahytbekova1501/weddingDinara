@@ -1,23 +1,41 @@
 {
   "files": {
-    "main.css": "/weddingDinara/static/css/main.84c546a1.css",
-    "main.js": "/weddingDinara/static/js/main.df3f1ee4.js",
-    "static/js/437.6215cb80.chunk.js": "/weddingDinara/static/js/437.6215cb80.chunk.js",
+    "main.css": "/weddingDinara/static/css/main.199f5d68.css",
+    "main.js": "/weddingDinara/static/js/main.a652d80e.js",
+    "static/js/437.0f8548d9.chunk.js": "/weddingDinara/static/js/437.0f8548d9.chunk.js",
+    "static/media/photo13.jpg": "/weddingDinara/static/media/photo13.be6310c7854c510579aa.jpg",
     "static/media/new.mp3": "/weddingDinara/static/media/new.1dd8242af8d8bc25d0ff.mp3",
-    "static/media/photo1.jpg": "/weddingDinara/static/media/photo1.9b2dc1036020df83e5eb.jpg",
+    "static/media/photo1.jpg": "/weddingDinara/static/media/photo1.cfe2636758c9862def93.jpg",
+    "static/media/photo9.jpg": "/weddingDinara/static/media/photo9.a6df990c9229ecd91b12.jpg",
+    "static/media/flower5.png": "/weddingDinara/static/media/flower5.fcc04f2d28275ee8163d.png",
+    "static/media/flower2.png": "/weddingDinara/static/media/flower2.7ea1d7ed2fb69ba99496.png",
+    "static/media/flower1.png": "/weddingDinara/static/media/flower1.74289f8b098647c27d85.png",
+    "static/media/flower4.png": "/weddingDinara/static/media/flower4.b868de01b256743d0742.png",
+    "static/media/flower6.png": "/weddingDinara/static/media/flower6.6daf8c176e444bf58e62.png",
+    "static/media/flower3.png": "/weddingDinara/static/media/flower3.7a1ae118bb99b79a6bff.png",
+    "static/media/flower7.png": "/weddingDinara/static/media/flower7.75ff9c730a6b0f6c2f46.png",
+    "static/media/flowerWhite.png": "/weddingDinara/static/media/flowerWhite.f954decba6da545a3a33.png",
+    "static/media/flower8.png": "/weddingDinara/static/media/flower8.b4420bd2ff49e8e1e05f.png",
     "static/media/кольца_серебро.png": "/weddingDinara/static/media/кольца_серебро.d203f984b1ffd532d902.png",
     "static/media/кольца_золото.png": "/weddingDinara/static/media/кольца_золото.097c03d33bfd03f8e379.png",
+    "static/media/flower23.png": "/weddingDinara/static/media/flower23.6154fb7fb250b0c8176d.png",
+    "static/media/flower9.png": "/weddingDinara/static/media/flower9.9f46118a68ad833c278f.png",
     "static/media/ofont.ru_Lastochka.ttf": "/weddingDinara/static/media/ofont.ru_Lastochka.55feea1319d1d8f6db43.ttf",
     "static/media/party.jfif": "/weddingDinara/static/media/party.be33011b47dc2330411b.jfif",
     "static/media/руки2.jpg": "/weddingDinara/static/media/руки2.b73ad72451cc453c7560.jpg",
-    "static/media/heart1.svg": "/weddingDinara/static/media/heart1.ed255a99a360c8695baddba8a657b8d3.svg",
+    "static/media/lepestki.png": "/weddingDinara/static/media/lepestki.0905f7724dd8d2f40283.png",
+    "static/media/сердце2.png": "/weddingDinara/static/media/сердце2.36b6fafdf8b5c1c85dc9.png",
+    "static/media/krai.png": "/weddingDinara/static/media/krai.657306a1f1aee90f7a17.png",
+    "static/media/krai2.png": "/weddingDinara/static/media/krai2.1dbf5981e4c86ecbc3f1.png",
+    "static/media/krai3.png": "/weddingDinara/static/media/krai3.dc88f181896902971fb2.png",
+    "static/media/krai4.png": "/weddingDinara/static/media/krai4.3871331bf2f20f497206.png",
     "index.html": "/weddingDinara/index.html",
-    "main.84c546a1.css.map": "/weddingDinara/static/css/main.84c546a1.css.map",
-    "main.df3f1ee4.js.map": "/weddingDinara/static/js/main.df3f1ee4.js.map",
-    "437.6215cb80.chunk.js.map": "/weddingDinara/static/js/437.6215cb80.chunk.js.map"
+    "main.199f5d68.css.map": "/weddingDinara/static/css/main.199f5d68.css.map",
+    "main.a652d80e.js.map": "/weddingDinara/static/js/main.a652d80e.js.map",
+    "437.0f8548d9.chunk.js.map": "/weddingDinara/static/js/437.0f8548d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84c546a1.css",
-    "static/js/main.df3f1ee4.js"
+    "static/css/main.199f5d68.css",
+    "static/js/main.a652d80e.js"
   ]
 }
