@@ -22,6 +22,9 @@
   --fifth-family: "Tangerine", cursive;
   --sixth-family: "Playfair Display SC", serif;
 }
+body {
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -31,65 +34,28 @@
 .image_1 {
   width: 100%;
 }
-.image_2 {
-  margin: 10vh 0 10vh 0;
-  width: 90%;
-}
-.image_3_container {
-  position: relative;
-  width: 90%;
-  margin: 20vw 0 10vw 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
-.image_3 {
-  width: 100%;
-
-  /* margin: 3vh 0 3vh 0; */
-}
 .сountdown {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 10;
   white-space: nowrap;
+  margin: 30vw 0 35vw 0;
 }
 .gradient-mask {
   position: relative;
   display: inline-block;
-  overflow: hidden; /* Чтобы градиент не выходил за пределы фотографии */
-  width: 100%; /* Установите ширину по необходимости */
+  width: 100%;
+  overflow: visible;
+  clip-path: inset(0 0 -300px 0);
 }
 
-.gradient-mask::after {
-  content: "";
+.krai {
   position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 35%; /* Высота области с градиентом */
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1),
-    transparent
-  ); /* Градиент от белого до прозрачного */
-  pointer-events: none; /* Предотвращение взаимодействия с градиентом */
-  mask-image: linear-gradient(to top, black 30%, transparent 90%);
+  bottom: -0%;
+  left: 0;
+  transform: rotate(180deg);
 }
-/* .language {
-  position: absolute;
-  font-size: 4vw;
-  z-index: 10;
-  color: black;
-  bottom: 90%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-} */
+
 .language-buttons {
   display: flex;
   font-size: 4vw;
@@ -100,6 +66,7 @@
   position: absolute;
   justify-content: space-around;
   margin-bottom: 20px;
+  z-index: 15;
 }
 
 .language {
@@ -107,20 +74,19 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #4588c6;
+  color: #6495ed;
 }
 
 .language.selected {
-  color: #0e1a44;
+  color: #002f55;
 }
 
 .name {
   position: absolute;
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-around;
   width: 80%;
-  bottom: 25%;
+  bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -137,60 +103,261 @@
 
 .ring {
   position: absolute;
-  bottom: 10%;
-  left: 94%;
+  bottom: 12%;
+  left: 95%;
   height: 20vw;
   width: 10vw;
 }
 .music {
   position: absolute;
-  top: 80%;
+  top: 87%;
   left: 50%;
-  transform: translate(-50%, -50%); /* по обеим осям */
+  transform: translate(-50%, -50%);
   z-index: 10;
 }
 
+/* цветы */
+.flower_1 {
+  position: absolute;
+  top: -8%;
+  left: 0%;
+  z-index: 10;
+  transform: rotate(120deg);
+}
+.flower_1_second {
+  top: 0%;
+  left: 2%;
+  transform: rotate(220deg);
+  z-index: 0;
+}
+
+.flower_1_third {
+  top: -5%;
+  left: -11%;
+  transform: rotate(75deg);
+  z-index: 10;
+}
+.flower_1_fourth {
+  top: -7%;
+  left: 17%;
+  transform: rotate(120deg);
+  z-index: 5;
+}
+.flower_1_fifth {
+  top: 7%;
+  left: 0%;
+  transform: rotate(110deg);
+  z-index: 0;
+}
+.flower_1_sixth {
+  top: 9%;
+  left: -10%;
+  transform: rotate(100deg);
+  z-index: 11;
+}
+.flower_1_seventh {
+  top: 18%;
+  left: -15%;
+  transform: rotate(75deg);
+  z-index: 0;
+}
+.flower_1_eighth {
+  top: -14%;
+  left: 28%;
+  transform: rotate(75deg);
+  z-index: 0;
+}
+
+.flower_down {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+.flowerWite_main {
+  position: absolute;
+  top: 76%;
+  left: 84%;
+  transform: rotate(-90deg);
+  z-index: 6;
+}
+.flowerWite_main_2 {
+  top: 82%;
+  left: 73%;
+  z-index: 5;
+  transform: rotate(-90deg);
+}
+.flowerWite_main_3 {
+  top: 90%;
+  left: 85%;
+}
+.flowerWite_main_4 {
+  top: 100%;
+  left: 84%;
+  z-index: 0;
+}
+.flowerWite_main_5 {
+  top: 110%;
+  left: 85%;
+  z-index: 0;
+}
+/*  */
 .tetx_1,
 .tetx_2 {
   text-align: center;
-  font-weight: 200;
-  font-size: 5vw;
-  margin: 0 3vw 0 3vw;
+  font-weight: 400;
+  font-size: 4vw;
+  margin: 0 10vw 0 10vw;
+  color: #002f55;
 }
 .tetx_1 {
-  font-size: 8vw;
-  color: #c5b396;
-  margin: 10vw 0 5vw 0;
+  font-size: 7vw;
+  color: #6495ed;
+  font-weight: 400;
+  margin: 15vw 0 5vw 0;
   white-space: nowrap;
 }
-/* .blesk {
-  z-index: 10;
-  position: absolute;
-  bottom: 70%;
-  left: 50%;
-  transform: translateX(-50%);
-} */
+
 .date {
   margin: 20vw 0 10vw 0;
   text-align: center;
-  color: #c5b396;
-  font-weight: 200;
-  font-size: 6vw;
+  color: #6495ed;
+  font-weight: 400;
+  font-size: 7vw;
 }
+
+.image_2_block {
+  position: relative;
+  margin: 10vh 0 20vw 0;
+}
+.image_2 {
+  width: 100%;
+}
+.krai_2 {
+  position: absolute;
+  width: 100%;
+  bottom: 87%;
+  z-index: 1;
+}
+.krai_3 {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  z-index: 1;
+  /* transform: rotate(180deg); */
+}
+/* .adress_block {
+  background-color: #6495ed;
+} */
 .time {
   text-align: center;
 }
 .start {
-  font-weight: 200;
+  font-weight: 400;
   margin: 0;
-  font-size: 6vw;
+  font-size: 7vw;
 }
-.times {
-  /* font-family: var(--second-family); */
+
+.adress_block {
+  position: relative;
+  overflow: visible;
+  clip-path: inset(-300px 0 -300px 0);
+  z-index: 10;
+}
+
+.flower_adress {
+  position: absolute;
+  top: -25%;
+  left: -10%;
+  z-index: 10;
+}
+.flower_adress_2 {
+  top: -15%;
+  left: -12%;
+  z-index: 0;
+  transform: rotate(90deg);
+}
+.flower_adress_3 {
+  top: 32%;
+  left: 78%;
+  z-index: 5;
+  transform: rotate(-75deg);
+}
+.flower_adress_4 {
+  top: 48%;
+  left: 80%;
+  z-index: 5;
+  transform: rotate(-90deg);
+}
+.flower_adress_5 {
+  top: 58%;
+  left: 82%;
+  z-index: 5;
+  transform: rotate(-45deg);
+}
+
+.flower_adress_6 {
+  top: 85%;
+  left: 85%;
+  z-index: 2;
+  transform: rotate(-120deg);
+}
+.flower_adress_7 {
+  top: 72%;
+  left: 82%;
+  z-index: 0;
+  transform: rotate(30deg);
+}
+.flower_adress_8 {
+  top: 100%;
+  left: 80%;
+  z-index: 1;
+  transform: rotate(-120deg);
+}
+.flower_adress_9 {
+  top: 110%;
+  left: 89%;
+  z-index: 0;
+  transform: rotate(-120deg);
+}
+.flower_adress_10 {
+  top: 17%;
+  left: 87%;
+  z-index: 0;
+  transform: rotate(-120deg);
+}
+
+.karta_btn {
+  width: 55%;
+  height: 10vw;
+  background: linear-gradient(
+    135deg,
+    rgba(100, 149, 237, 0.4) 0%,
+    /* насыщенный угол */ rgba(100, 149, 237, 0.2) 25%,
+    /* мягче */ rgba(100, 149, 237, 0.1) 50%,
+    /* почти прозрачный */ rgba(100, 149, 237, 0.25) 75%,
+    /* снова насыщение */ rgba(100, 149, 237, 0.05) 100% /* прозрачный край */
+  );
+  border: 1px solid rgba(100, 149, 237, 0.3);
+  border-radius: 3vw;
+  color: #002f55;
+  /* font-weight: 700; */
   font-weight: 300;
-  font-size: 6vw;
-  margin: 5vw 0;
+  font-size: 5vw;
+  font-family: var(--main-family);
+  margin: 7vw 0 10vw 0;
 }
+/* .lepestki {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  bottom: -20%;
+} */
+
+.times {
+  font-weight: 300;
+  font-size: 7vw;
+  /* margin: 5vw 0; */
+}
+
 .adress {
   display: flex;
   flex-direction: column;
@@ -198,24 +365,128 @@
   align-items: center;
   text-align: center;
 }
-.adress h2 {
-  /* color: #c5b396; */
+/* .adress h2 {
+  color: #c5b396;
   font-size: 5vw;
   font-weight: 200;
   margin: 0;
+} */
+
+.image_3_container {
+  position: relative;
+  margin: 20vw 0 10vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+.image_3 {
+  width: 100%;
+
+  /* margin: 3vh 0 3vh 0; */
+}
+
+.image_3_krai {
+  position: absolute;
+  width: 100%;
+  bottom: 95%;
+  left: 0;
+  transform: rotate(180deg);
+}
+.image_3_krai_2 {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  left: 0;
+  /* transform: rotate(180deg); */
+}
 .name_res {
   font-family: var(--second-family);
-  color: #c5b396;
+  color: #6495ed;
   font-weight: 300;
   font-size: 10vw;
-  margin: 3vw;
+  margin: 5vw 0;
 }
 .aadress_res {
   font-weight: 200;
   font-size: 5vw;
   margin: 0 3vw 0 3vw;
+}
+.restourant {
+  width: 100%;
+}
+
+.flower_bottom_1 {
+  position: absolute;
+  top: -20%;
+  left: -15%;
+  z-index: 6;
+  transform: rotate(-75deg);
+}
+.flower_bottom_2 {
+  position: absolute;
+  top: -50%;
+  left: -5%;
+  z-index: 5;
+  transform: rotate(120deg);
+}
+.flower_bottom_3 {
+  position: absolute;
+  top: 80%;
+  left: -20%;
+  z-index: 5;
+  transform: rotate(160deg);
+}
+.flower_bottom_4 {
+  position: absolute;
+  top: 40%;
+  left: -15%;
+  z-index: 5;
+  transform: rotate(160deg);
+}
+.flower_bottom_5 {
+  position: absolute;
+  top: -95%;
+  left: -18%;
+  z-index: 4;
+  transform: rotate(160deg);
+}
+
+.flower_bottom_6 {
+  position: absolute;
+  top: -307%;
+  left: -18%;
+  z-index: 4;
+  transform: rotate(160deg);
+}
+.flower_bottom_7 {
+  position: absolute;
+  top: -350%;
+  left: -10%;
+  z-index: 4;
+  transform: rotate(120deg);
+}
+.flower_bottom_8 {
+  position: absolute;
+  top: -250%;
+  left: 80%;
+  z-index: 4;
+  transform: rotate(160deg);
+}
+.flower_bottom_9 {
+  position: absolute;
+  top: -200%;
+  left: 82%;
+  z-index: 4;
+  transform: rotate(-120deg);
+}
+.flower_bottom_10 {
+  position: absolute;
+  top: -300%;
+  left: 87%;
+  z-index: 4;
+  transform: rotate(-90deg);
 }
 .answer_form_container {
   width: 90%;
@@ -225,10 +496,18 @@
   text-align: center;
 }
 .anser_form_h2 {
-  font-size: 6vw;
+  font-size: 7vw;
   font-weight: 200;
-  margin: 5vh 0;
-  color: #c5b396;
+  margin: 20vw 0 10vw 0;
+  color: #6495ed;
+}
+.anser_form_h2_alc {
+  text-align: start;
+  /* width: 100%; */
+  font-size: 7vw;
+  font-weight: 200;
+  margin: 4vw 0;
+  color: #6495ed;
 }
 .answer_form_container p {
   font-size: 4vw;
@@ -240,7 +519,7 @@
 .main-input {
   height: 10vw;
   width: 97%;
-  border: 2px solid #c5b396;
+  border: 2px solid #6495ed;
   background-color: rgba(255, 255, 255, 0);
   padding-left: 2vw;
   border-radius: 3vw;
@@ -251,6 +530,7 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  gap: 0.5rem;
 }
 
 .radio-label {
@@ -260,7 +540,7 @@
   /* justify-content: flex-start; */
   /* font-size: 6vw; */
   white-space: nowrap;
-  color: #000000; /* Цвет текста меток */
+  color: #002f55; /* Цвет текста меток */
 }
 
 .radio-input {
@@ -270,33 +550,40 @@
   -moz-appearance: none;
   width: 16px; /* Размер кастомного кружка */
   height: 16px; /* Размер кастомного кружка */
-  border: 2px solid #c5b396; /* Цвет рамки для не выбранных радио кнопок */
+  border: 2px solid #6495ed; /* Цвет рамки для не выбранных радио кнопок */
   border-radius: 50%; /* Круглый кружок */
   outline: none; /* Убираем контур фокуса */
   cursor: pointer; /* Указатель при наведении */
 }
 
 .radio-input:checked {
-  background-color: #c5b396; /* Цвет фона для выбранных радио кнопок */
-  border-color: #c5b396; /* Цвет рамки для выбранных радио кнопок */
+  background-color: #6495ed; /* Цвет фона для выбранных радио кнопок */
+  border-color: #6495ed; /* Цвет рамки для выбранных радио кнопок */
 }
 
 .radio-input:checked + .radio-label {
-  color: #c5b396; /* Цвет текста метки для выбранных радио кнопок */
+  color: #6495ed; /* Цвет текста метки для выбранных радио кнопок */
 }
 .btn-container {
   display: flex;
   justify-content: center;
 }
 .btn {
-  width: 50%;
+  width: 60%;
   height: 10vw;
-  background-color: #c5b396;
-  border: 1px solid #c5b396;
-  border-radius: 5vw;
-  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(100, 149, 237, 0.4) 0%,
+    /* насыщенный угол */ rgba(100, 149, 237, 0.2) 25%,
+    /* мягче */ rgba(100, 149, 237, 0.1) 50%,
+    /* почти прозрачный */ rgba(100, 149, 237, 0.25) 75%,
+    /* снова насыщение */ rgba(100, 149, 237, 0.05) 100% /* прозрачный край */
+  );
+  border: 1px solid rgba(100, 149, 237, 0.3);
+  border-radius: 3vw;
+  color: #002f55;
   /* font-weight: 700; */
-  font-weight: 200;
+  font-weight: 300;
   font-size: 5.5vw;
   font-family: var(--main-family);
   margin: 7vw 0 10vw 0;
@@ -316,7 +603,7 @@
   transform: translateY(0); /* Возвращаем текст в исходное положение */
 }
 .quote {
-  color: #c5b396;
+  color: #6495ed;
   font-weight: 200;
   text-align: center;
   font-size: 5vw;
@@ -343,6 +630,40 @@
   animation: moveDown 3s infinite; /* Добавляем анимацию */
 }
 
+.drink_preference {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.radio-input_2 {
+  appearance: none; /* убираем стандартный вид */
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #6495ed;
+  margin: 0 5px 0 0;
+  border-radius: 20%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.radio-input_2:checked {
+  background-color: #6495ed; /* Цвет фона для выбранных радио кнопок */
+  border-color: #6495ed; /* Цвет рамки для выбранных радио кнопок */
+}
+
+.radio-input_2:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
 @keyframes moveDown {
   0% {
     top: 0; /* Начинаем сверху */

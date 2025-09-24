@@ -1,6 +1,6 @@
 import React from "react";
 import "./Сalendar.css";
-import heart from "../img/heart1.svg";
+import heart from "../img/сердце2.png";
 import { useTranslation } from "react-i18next";
 
 const Calendar = () => {
@@ -22,9 +22,14 @@ const Calendar = () => {
         {/* Отображаем дни месяца */}
         {monthDays.map((day) => (
           <div key={day} className="calendar-day">
-            {day === 26 ? (
+            {day === 19 ? (
               <div className="heart-icon-container">
-                <img className="heart-icon" src={heart} alt="Heart Icon" />
+                <img
+                  style={{ width: "35px", height: "30px" }}
+                  className="heart-icon"
+                  src={heart}
+                  alt="Heart Icon"
+                />
                 <div className="day-number">{day}</div>
               </div>
             ) : (

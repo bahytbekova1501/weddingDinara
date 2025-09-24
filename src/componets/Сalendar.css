@@ -18,6 +18,7 @@
   padding: 0;
   text-align: center;
   min-height: 35px;
+  color: #002f55;
 }
 
 .calendar-day:hover {
@@ -26,7 +27,7 @@
 
 .calendar-day:nth-child(7n),
 .calendar-day:nth-child(7n-1) {
-  color: black;
+  color: #6495ed;
 }
 .heart-icon-container {
   position: relative;
@@ -68,10 +69,10 @@
     font-size: 4vw;
     min-height: 30px;
   }
-  .heart-icon {
-    width: 30px;
-    height: 30px;
-  }
+  /* .heart-icon {
+    width: 50px;
+    height: 20px;
+  } */
 }
 @media (max-width: 300px) {
   .calendar {
