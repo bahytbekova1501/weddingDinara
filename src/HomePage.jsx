@@ -127,7 +127,6 @@ function HomePage() {
 
   return (
     <div>
-      {/* Шапка с фото и музыкой */}
       <div className="gradient-mask">
         <img className="image_1" src={image} alt="" />
         <div className="name">
@@ -163,13 +162,13 @@ function HomePage() {
             alt=""
           />
         </div>
-        <div className="flower_1 flower_1_second">
+        {/* <div className="flower_1 flower_1_second">
           <img
             style={{ width: "30vw", height: "30vw" }}
             src={flowerWhite}
             alt=""
           />
-        </div>
+        </div> */}
         <div className="flower_1 flower_1_third">
           <img style={{ width: "30vw", height: "30vw" }} src={flower8} alt="" />
         </div>
