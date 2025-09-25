@@ -676,6 +676,43 @@ body {
   left: 50%;
   transform: translate(-50%, -55%);
 }
+
+/* 👇 ВАЖНО: убираем блокировку скролла у абсолютных декоративных элементов */
+.flower_1,
+.flower_1_second,
+.flower_1_third,
+.flower_1_fourth,
+.flower_1_fifth,
+.flower_1_sixth,
+.flower_1_seventh,
+.flower_1_eighth,
+.flowerWite_main,
+.flowerWite_main_2,
+.flowerWite_main_3,
+.flowerWite_main_4,
+.flowerWite_main_5,
+.flower_adress,
+.flower_adress_2,
+.flower_adress_3,
+.flower_adress_4,
+.flower_adress_5,
+.flower_adress_6,
+.flower_adress_7,
+.flower_adress_8,
+.flower_adress_9,
+.flower_adress_10,
+.flower_bottom_1,
+.flower_bottom_2,
+.flower_bottom_3,
+.flower_bottom_4,
+.flower_bottom_5,
+.flower_bottom_6,
+.flower_bottom_7,
+.flower_bottom_8,
+.flower_bottom_9,
+.flower_bottom_10 {
+  pointer-events: none; /* 🌸 цветы больше не блокируют скролл */
+}
 @keyframes moveDown {
   0% {
     top: 0; /* Начинаем сверху */
