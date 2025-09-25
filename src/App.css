@@ -302,10 +302,10 @@ body {
   transform: rotate(-120deg);
 }
 .flower_adress_7 {
-  top: 72%;
-  left: 82%;
+  top: 73%;
+  left: 76%;
   z-index: 0;
-  transform: rotate(30deg);
+  transform: rotate(-90deg);
 }
 .flower_adress_8 {
   top: 100%;
