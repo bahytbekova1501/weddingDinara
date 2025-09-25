@@ -395,128 +395,117 @@ function HomePage() {
         <div className="сountdown ">
           <Time />
         </div>
-        {i18n.language === "kg" && (
-          <div
-            className="time_flowers_container"
-            // className="animate-on-scroll"
+        <div
+          className="time_flowers_container"
+          // className="animate-on-scroll"
+        >
+          <img
             style={{
-              position: "relative",
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-              overflow: "visible",
+              position: "absolute",
+              width: "100%",
+              bottom: "76%",
+              transform: "rotate(180deg)",
+            }}
+            src={krai3}
+            alt=""
+          />
+          <img
+            style={{
+              position: "absolute",
+              zIndex: "-1",
+              width: "100%",
+              height: "640%",
+              // height: "140%",
+            }}
+            src={fon}
+            alt=""
+          />
+          {/* flowers */}
+          <div className="flower_bottom_1 ">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flowerWhite}
+              alt=""
+            />
+          </div>{" "}
+          <div className="flower_bottom_2">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flower8}
+              alt=""
+            />
+          </div>{" "}
+          <div className="flower_bottom_3">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flowerWhite}
+              alt=""
+            />
+          </div>{" "}
+          <div className="flower_bottom_4">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flower8}
+              alt=""
+            />
+          </div>{" "}
+          <div className="flower_bottom_5">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flowerWhite}
+              alt=""
+            />
+          </div>{" "}
+          {/* flower 2 */}
+          <div className="flower_bottom_6">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flowerWhite}
+              alt=""
+            />
+          </div>{" "}
+          <div className="flower_bottom_7">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flower8}
+              alt=""
+            />
+          </div>{" "}
+          <div className="flower_bottom_8">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flowerWhite}
+              alt=""
+            />
+          </div>{" "}
+          <div className="flower_bottom_9">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flower8}
+              alt=""
+            />
+          </div>{" "}
+          <div className="flower_bottom_10">
+            <img
+              style={{ width: "30vw", height: "30vw" }}
+              src={flower8}
+              alt=""
+            />
+          </div>{" "}
+          <h2
+            style={{
+              color: " #6495ed",
+              fontSize: "7vw",
+              fontWeight: "200",
+              margin: "20vw 0 3vw 0",
             }}
           >
-            <img
-              style={{
-                position: "absolute",
-                width: "100%",
-                bottom: "76%",
-                transform: "rotate(180deg)",
-              }}
-              src={krai3}
-              alt=""
-            />
-            <img
-              style={{
-                position: "absolute",
-                zIndex: "-1",
-                width: "100%",
-                height: "630%",
-                // height: "140%",
-              }}
-              src={fon}
-              alt=""
-            />
-            {/* flowers */}
-            <div className="flower_bottom_1 ">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flowerWhite}
-                alt=""
-              />
-            </div>{" "}
-            <div className="flower_bottom_2">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flower8}
-                alt=""
-              />
-            </div>{" "}
-            <div className="flower_bottom_3">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flowerWhite}
-                alt=""
-              />
-            </div>{" "}
-            <div className="flower_bottom_4">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flower8}
-                alt=""
-              />
-            </div>{" "}
-            <div className="flower_bottom_5">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flowerWhite}
-                alt=""
-              />
-            </div>{" "}
-            {/* flower 2 */}
-            <div className="flower_bottom_6">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flowerWhite}
-                alt=""
-              />
-            </div>{" "}
-            <div className="flower_bottom_7">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flower8}
-                alt=""
-              />
-            </div>{" "}
-            <div className="flower_bottom_8">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flowerWhite}
-                alt=""
-              />
-            </div>{" "}
-            <div className="flower_bottom_9">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flower8}
-                alt=""
-              />
-            </div>{" "}
-            <div className="flower_bottom_10">
-              <img
-                style={{ width: "30vw", height: "30vw" }}
-                src={flower8}
-                alt=""
-              />
-            </div>{" "}
-            <h2
-              style={{
-                color: " #6495ed",
-                fontSize: "7vw",
-                fontWeight: "200",
-                margin: "20vw 0 3vw 0",
-              }}
-            >
-              {t("owners")}
-            </h2>
-            <p
-              style={{ fontSize: "5.5vw", fontWeight: "200", color: "#002f55" }}
-            >
-              Талант , Ырыс
-            </p>
-          </div>
-        )}
+            {t("Wedding Hosts")}
+          </h2>
+          <p style={{ fontSize: "5.5vw", fontWeight: "200", color: "#002f55" }}>
+            Талант , Ырыс
+          </p>
+        </div>
         {/* Форма ответа */}
         <div className="answer_form_container">
           <h2
