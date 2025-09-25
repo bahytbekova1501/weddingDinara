@@ -4,12 +4,19 @@ import heart from "../img/сердце2.png";
 import { useTranslation } from "react-i18next";
 
 const Calendar = () => {
-  const { t, i18n } = useTranslation();
-  // Массив с названиями дней недели
+  const { t } = useTranslation();
   const weekDays = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 
-  // Создаем массив с днями месяца
-  const monthDays = Array.from({ length: 31 }, (_, index) => index + 1); // Создаем массив от 1 до 31
+  const year = 2025;
+  const month = 9; // Октябрь (0 = Январь)
+  const daysInMonth = 31;
+
+  // День недели для 1 октября 2025
+  const firstDay = new Date(year, month, 1).getDay(); // 0 = Воскресенье
+  const offset = firstDay === 0 ? 6 : firstDay - 1; // Преобразуем к Пн=0
+
+  const emptyDays = Array.from({ length: offset }, () => null);
+  const monthDays = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
   return (
     <div className="calendar">
@@ -19,7 +26,11 @@ const Calendar = () => {
             {day}
           </div>
         ))}
-        {/* Отображаем дни месяца */}
+
+        {emptyDays.map((_, i) => (
+          <div key={"empty-" + i} className="calendar-day"></div>
+        ))}
+
         {monthDays.map((day) => (
           <div key={day} className="calendar-day">
             {day === 19 ? (
