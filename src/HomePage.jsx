@@ -419,7 +419,8 @@ function HomePage() {
               style={{
                 position: "absolute",
                 zIndex: "-1",
-                width: "145%",
+                width: "100%",
+                height: "610%",
                 // height: "140%",
               }}
               src={fon}
