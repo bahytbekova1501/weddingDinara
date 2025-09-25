@@ -22,6 +22,7 @@
   --fifth-family: "Tangerine", cursive;
   --sixth-family: "Playfair Display SC", serif;
 }
+
 body {
   overflow-x: hidden;
 }
@@ -598,6 +599,11 @@ body {
   transition: opacity 1s ease, transform 1s ease; /* Плавная анимация появления */
 }
 
+/* Когда React готов */
+body.loaded .animate-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
 .animate-on-scroll.show {
   opacity: 1; /* При появлении текста устанавливаем полную прозрачность */
   transform: translateY(0); /* Возвращаем текст в исходное положение */

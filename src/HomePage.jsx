@@ -87,6 +87,7 @@ function HomePage() {
 
   // Анимации при скролле
   useEffect(() => {
+    document.body.classList.add("loaded");
     function handleScroll() {
       const elements = document.querySelectorAll(".animate-on-scroll");
       elements.forEach((element) => {
