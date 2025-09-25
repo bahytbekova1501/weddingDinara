@@ -28,6 +28,8 @@ body {
   overflow-y: auto;
   width: 100%;
   min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   /* height: 200%; */
 }
 * {
