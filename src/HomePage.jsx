@@ -397,12 +397,14 @@ function HomePage() {
         </div>
         {i18n.language === "kg" && (
           <div
+            className="time_flowers_container"
             // className="animate-on-scroll"
             style={{
               position: "relative",
               display: "flex",
               alignItems: "center",
               flexDirection: "column",
+              overflow: "visible",
             }}
           >
             <img
@@ -420,7 +422,7 @@ function HomePage() {
                 position: "absolute",
                 zIndex: "-1",
                 width: "100%",
-                height: "610%",
+                height: "630%",
                 // height: "140%",
               }}
               src={fon}

@@ -417,7 +417,14 @@ body {
 .restourant {
   width: 100%;
 }
-
+.time_flowers_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+  clip-path: inset(-700px 0 -1500px 0);
+}
 .flower_bottom_1 {
   position: absolute;
   top: -20%;
