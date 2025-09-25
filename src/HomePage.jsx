@@ -26,6 +26,8 @@ import krai from "./img/krai.png";
 import krai2 from "./img/krai2.png";
 import krai3 from "./img/krai3.png";
 import krai4 from "./img/krai4.png";
+import photoNew from "./img/photo22.jpg";
+
 import lepestki from "./img/lepestki.png";
 import restourant from "./img/Restourant.png";
 import fon from "./img/fon2.png";
@@ -381,7 +383,7 @@ function HomePage() {
               style={{ color: " #002f55" }}
               className="times animate-on-scroll"
             >
-              17:00
+              16:00
             </h2>
           </div>
         </div>
@@ -389,7 +391,7 @@ function HomePage() {
           <div className="image_3_container">
             <img className="image_3_krai" src={krai3} alt="" />{" "}
             <img className="image_3_krai_2" src={krai3} alt="" />
-            <img className="image_3" src={photo6} alt="" />
+            <img className="image_3" src={photoNew} alt="" />
           </div>
         </div>{" "}
         <div className="сountdown ">

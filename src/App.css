@@ -22,11 +22,12 @@
   --fifth-family: "Tangerine", cursive;
   --sixth-family: "Playfair Display SC", serif;
 }
-/* html, */
+html,
 body {
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
+  min-height: 100%;
   /* height: 200%; */
 }
 * {
