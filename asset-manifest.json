@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weddingDinara/static/css/main.ca0fc718.css",
+    "main.css": "/weddingDinara/static/css/main.ad661afd.css",
     "main.js": "/weddingDinara/static/js/main.eca2f87e.js",
     "static/js/437.0f8548d9.chunk.js": "/weddingDinara/static/js/437.0f8548d9.chunk.js",
     "static/media/photo13.jpg": "/weddingDinara/static/media/photo13.be6310c7854c510579aa.jpg",
@@ -33,12 +33,12 @@
     "static/media/krai3.png": "/weddingDinara/static/media/krai3.dc88f181896902971fb2.png",
     "static/media/krai4.png": "/weddingDinara/static/media/krai4.3871331bf2f20f497206.png",
     "index.html": "/weddingDinara/index.html",
-    "main.ca0fc718.css.map": "/weddingDinara/static/css/main.ca0fc718.css.map",
+    "main.ad661afd.css.map": "/weddingDinara/static/css/main.ad661afd.css.map",
     "main.eca2f87e.js.map": "/weddingDinara/static/js/main.eca2f87e.js.map",
     "437.0f8548d9.chunk.js.map": "/weddingDinara/static/js/437.0f8548d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca0fc718.css",
+    "static/css/main.ad661afd.css",
     "static/js/main.eca2f87e.js"
   ]
 }
