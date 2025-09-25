@@ -86,7 +86,15 @@ function HomePage() {
       );
     }
   };
+  useEffect(() => {
+    // Даем фокус body
+    document.body.tabIndex = -1;
+    document.body.focus();
 
+    // Хак: имитация маленького скролла, чтобы «разбудить» скролл
+    window.scrollTo(0, 1);
+    setTimeout(() => window.scrollTo(0, 0), 50);
+  }, []);
   // Анимации при скролле
   useEffect(() => {
     function handleScroll() {
