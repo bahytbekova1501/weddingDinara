@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/weddingDinara/static/css/main.3bf22b68.css",
-    "main.js": "/weddingDinara/static/js/main.e07e05d0.js",
+    "main.css": "/weddingDinara/static/css/main.0715d8de.css",
+    "main.js": "/weddingDinara/static/js/main.eca2f87e.js",
     "static/js/437.0f8548d9.chunk.js": "/weddingDinara/static/js/437.0f8548d9.chunk.js",
     "static/media/photo13.jpg": "/weddingDinara/static/media/photo13.be6310c7854c510579aa.jpg",
     "static/media/new.mp3": "/weddingDinara/static/media/new.1dd8242af8d8bc25d0ff.mp3",
@@ -22,6 +22,7 @@
     "static/media/кольца_золото.png": "/weddingDinara/static/media/кольца_золото.097c03d33bfd03f8e379.png",
     "static/media/flower23.png": "/weddingDinara/static/media/flower23.6154fb7fb250b0c8176d.png",
     "static/media/flower9.png": "/weddingDinara/static/media/flower9.9f46118a68ad833c278f.png",
+    "static/media/photo22.jpg": "/weddingDinara/static/media/photo22.f07778e784d0f03bad6d.jpg",
     "static/media/ofont.ru_Lastochka.ttf": "/weddingDinara/static/media/ofont.ru_Lastochka.55feea1319d1d8f6db43.ttf",
     "static/media/party.jfif": "/weddingDinara/static/media/party.be33011b47dc2330411b.jfif",
     "static/media/руки2.jpg": "/weddingDinara/static/media/руки2.b73ad72451cc453c7560.jpg",
@@ -32,12 +33,12 @@
     "static/media/krai3.png": "/weddingDinara/static/media/krai3.dc88f181896902971fb2.png",
     "static/media/krai4.png": "/weddingDinara/static/media/krai4.3871331bf2f20f497206.png",
     "index.html": "/weddingDinara/index.html",
-    "main.3bf22b68.css.map": "/weddingDinara/static/css/main.3bf22b68.css.map",
-    "main.e07e05d0.js.map": "/weddingDinara/static/js/main.e07e05d0.js.map",
+    "main.0715d8de.css.map": "/weddingDinara/static/css/main.0715d8de.css.map",
+    "main.eca2f87e.js.map": "/weddingDinara/static/js/main.eca2f87e.js.map",
     "437.0f8548d9.chunk.js.map": "/weddingDinara/static/js/437.0f8548d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bf22b68.css",
-    "static/js/main.e07e05d0.js"
+    "static/css/main.0715d8de.css",
+    "static/js/main.eca2f87e.js"
   ]
 }
