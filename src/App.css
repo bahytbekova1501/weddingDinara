@@ -27,7 +27,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   /* height: 200%; */
 }
 * {
@@ -108,8 +108,8 @@ body {
 
 .ring {
   position: absolute;
-  bottom: 12%;
-  left: 95%;
+  bottom: 16%;
+  left: 98%;
   height: 20vw;
   width: 10vw;
 }
